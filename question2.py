@@ -20,18 +20,23 @@ else:
 #Task 2: Identify the Smallest Improve upon your code from Task 1 to also determine the smallest number among the three and print it out.
 
 def lowestAndHighest(num1, num2, num3):
+    highest_num = 0
+    lowest_num = 0
+
     if num1 <= num2 and num1 <= num3:
-        print(str(num1) + " is the lowest")
+        highest_num = num1
     elif num2 <= num3 and num2 <= num1:
-        print(str(num2) + " is the lowest")
+        highest_num = num2
     else:
-        print(str(num3) + " is the lowest")
+        highest_num = num3
 
     if num1 >= num2 and num1 >= num3:
-        print(str(num1) + " is the greatest")
+        lowest_num = num1
     elif num2 >= num1 and num2 >= num3:
-        print(str(num2) + " is the greatest")
+        lowest_num = num2
     else:
-        print(str(num3) + " is the greatest")
+        lowest_num = num3
+    
+    return print ("Highest number is: " + str(highest_num), ", Lowest number is: " + str(lowest_num))
 
-print(lowestAndHighest(int(input("Enter num1: ")), int(input("Enter num2: ")), int(input("Enter num3: "))))
+lowestAndHighest(input("enter num1: "), input("enter num2: "), input("enter num3: "))
